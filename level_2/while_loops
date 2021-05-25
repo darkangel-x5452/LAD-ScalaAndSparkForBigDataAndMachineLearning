@@ -1,0 +1,14 @@
+var x = 0
+
+while(x < 5) {
+  println(s"$x")
+  x = x + 1
+}
+
+import util.control.Breaks._
+var y = 0
+while (y < 10) {
+  println(s"y is $y")
+  y = y+ 1
+  if (y == 3) break
+}

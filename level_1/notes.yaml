@@ -1,0 +1,64 @@
+- 100
+- 2.5
+- math.pow(4,2)
+
+- val <name>:<type>=<literal>
+- var <name>:<type>=<literal>
+- val `my.string` = "hello"
+
+- val name = "jose"
+- val greet = s"hello ${name}"
+- val greet = f"hello ${name}"
+
+- printf("a string %s, an int %d, a float %f", "string", 10, 10.45)
+- printf("a float %1.2f", 10.4522)
+
+- st.charAt(0)
+- st.indexOf("a")
+- st slice (0,4)
+- st matches "term1"
+- st contains "term1"
+
+tuples:
+  - (1,2.2, "hello")
+  - val my_tup = (1,2,"hello",23.2, true)
+  - (3,1,(2,3))
+  - my_tup._3
+
+Collections:
+  - Lists:
+    - val evens = List(2,4,6,8,10)
+    - evens(0)
+    - evens. (press tab)
+    - evens.head
+    - evens.tail
+    - val my_list = List(List(1,2,3), List(4,5,6))
+    - val my_list = List(("a",1),("b",2),("c",3))
+    - my_list.sorted
+    - my_list.size
+    - my_list.product
+    - my_list.drop(2)
+    - my_list.takeRight(1)
+    - my_list slice (0,3)
+  - Array:
+    - val arr = Array(1,2,3)
+    - val arr = Array.range(0,10,2)
+    - Range(0,10)
+  - Set:
+    - val s = Set()
+    - val s = Set(1,2,3)
+    - val s = Set(1,1,1,2,2,3)
+    - val s = collection.mutable.Set(1,2,3)
+      - s += 4
+      - s.add(5)
+    - s.max
+    - s.min
+    - my_list.toSet
+  - Map:
+    - val mymap = Map(("a",1),("b",2),("c",3))
+    - mymap("a")
+    - mymap get "a"
+    - val mutmap = collection.mutable.Map(("x",1),("y",2),("z",3))
+      - mutmap += ("newkey" -> 99)
+    - mymap.keys
+    - mymap.values

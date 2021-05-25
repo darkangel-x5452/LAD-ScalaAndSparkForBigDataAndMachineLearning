@@ -1,0 +1,11 @@
+for (item <- List(1,2,3))  {
+  println(item)
+}
+
+for (item <- Array.range(0,10))  {
+  println(item)
+}
+
+for (item <- Set(0,1,2,10))  {
+  println(item)
+}

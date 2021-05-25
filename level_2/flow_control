@@ -1,0 +1,12 @@
+if(true) {
+  println("print if true")
+}
+
+val x = "hello"
+if (x.endsWith("0")) {
+  println(" ends with o")
+}
+
+println((1==2) && (2==2))
+println((1==2) || (2==2))
+println(!(1==2))

@@ -1,0 +1,28 @@
+Installation:
+  - https://medium.com/@josemarcialportilla/installing-scala-and-spark-on-windows-249632e6b83b#.r8nplo8dv
+  - https://medium.com/@josemarcialportilla/installing-scala-and-spark-on-ubuntu-5665ee4b62b1#.p6pn8r6gx
+  - https://medium.com/free-code-camp/installing-scala-and-apache-spark-on-mac-os-837ae57d283f#.hv79xf5ri:
+    - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    - xcode-select --install
+    - brew cask install java
+    - brew install scala
+    - brew install apache-spark
+    - spark-shell:
+      - Welcome to
+        ____              __
+        / __/__  ___ _____/ /__
+        _\ \/ _ \/ _ `/ __/  '_/
+        /___/ .__/\_,_/_/ /_/\_\   version 2.0.1
+        /_/
+        Using Scala version 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_102)
+        Type in expressions to have them evaluated.
+        Type :help for more information.
+        scala>
+    - Test:
+        - println("hello world")
+        - val s = "hello world"
+        - :load test.scala
+
+  - IDE:
+      - https://www.jetbrains.com/help/idea/2016.2/creating-and-running-your-scala-application.html
+      - https://supergloo.com/spark-scala/intellij-scala-spark/
