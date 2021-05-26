@@ -1,4 +1,33 @@
 - www.databricks.com:
     - Sign up
     - Go to community edition
-    -
+    - Create Notebook
+        - Language Scala
+    - Create Cluster
+    - Create Table
+
+
+Recommender System Notebook:
+	- import org.apache.spark.ml.recommedation.ALS
+    - val ratings = spark.read.option("header", "true").option("inferSchema","true").csv("file_path/movie_ratings.csv")
+    - ratings.printSchema
+    - val Array(training, test) = ratings.randomSplit(Array(0.8,0.2))
+    - val als = new ALS().setMaxIter(5).setRegParam(0.01).setUserCol("userId").setItemCol("movieId").setRatingCol("rating")
+    - val model = als.fit(training)
+    - val predictions = model.transform(test)
+    - predictions.show()
+    - import org.apache.spark.sql.functions._
+    - val error = predictions.select(abs($"rating"-$"prediciton"))
+    - error.show()
+    - error.describe.show() //has null values due to userId nulls.
+    - error.na.drop().describe.show()
+
+Zeppelin Notebooks AWS EMR:
+	- This will cost money.
+	- Open AWS EMR
+	- Create Cluster
+	- Select master group
+		- Add security rule to add your ip, via ssh
+		- Add tcp rule for 8890 for your ip. This is for Zeppelin
+	- Use public DNS to port 8890. Zeppelin notebook should appear in your browser for you to use.
+	- You can begin using the notebook with scala.
